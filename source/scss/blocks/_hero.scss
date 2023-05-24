@@ -1,0 +1,33 @@
+.hero {
+  background-image: url('../../img/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__wrapp {
+    padding: 280px 0 320px;
+  }
+
+  &__info {
+    max-width: 715px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__title {
+    text-align: left;
+    color: var(--color-white);
+  }
+
+  &__descr {
+    max-width: 615px;
+    color: var(--color-white);
+  }
+
+  &__btn {
+    max-width: 264px;
+    height: 78px;
+  }
+
+}

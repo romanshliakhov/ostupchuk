@@ -1,2 +1,15 @@
+.title {
+  font-family: var(--font-family-heliosextblack);
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-align: center;
 
+  span {
+    background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
 
