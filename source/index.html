@@ -23,7 +23,36 @@
       <section class="about" id="about">
         <div class="container">
           <div class="about__wrapp">
-            12
+            <ul class="about__graphs">
+              <li class="about__graphs-item">
+                <div class="about__graph">
+                  <picture>
+                    <source type='image/webp' srcset='img/graphs/jan.webp'>
+                    <img width='359' height='210' src='img/graphs/jan.png' alt='January'>
+                  </picture>
+                </div>
+              </li>
+
+              <li class="about__graphs-item">
+                <div class="about__graph">
+                  <picture>
+                    <source type='image/webp' srcset='img/graphs/feb.webp'>
+                    <img width='359' height='210' src='img/graphs/feb.png' alt='February'>
+                  </picture>
+                </div>
+              </li>
+            </ul>
+
+            <div class="about__info">
+              <div class="about__title title"><span>Успешная торговля</span></br> с проверенными сигналами</div>
+
+              <p>Мы понимаем, что торговля на финансовых рынках может быть сложной и рискованной задачей, поэтому мы предлагаем проверенные и надежные торговые сигналы, которые помогут вам минимизировать риски и увеличить потенциальную прибыль.</p>
+
+              <p>Мы следим за рыночными трендами, проводим технический и фундаментальный анализ, чтобы вы могли принимать обоснованные решения и успешно торговать.</p>
+
+              <a class="about__btn btn" href="#"><span>ПОЛУЧИТЬ ДОСТУП</span></a>
+            </div>
+
           </div>
         </div>
       </section>
@@ -31,7 +60,121 @@
       <section class="signals" id="signals">
         <div class="container">
           <div class="signals__wrapp">
-            <div class="signals__title title"><span>Успешная торговля</span></br> с проверенными сигналами</div>
+            <div class="signals__top">
+              <div class="signals__title title">Динамика счёта на <span>10 000$,</span> который торгует только по нашим сигналам</div>
+
+
+              <div class="signals__tabs tabs">
+                <ul class="signals__tabs-controls">
+                  <li class="signals__tabs-btns tablinks" tabs-btn="january">Январь</li>
+                  <li class="signals__tabs-btns tablinks" tabs-btn="february">Февраль</li>
+                  <li class="signals__tabs-btns tablinks active" tabs-btn="march">Март</li>
+                  <li class="signals__tabs-btns tablinks" tabs-btn="april">Апрель</li>
+                </ul>
+
+                <ul class="signals__tabcontents">
+                  <li class="signals__tabcontent tabcontent" tabs-content="january">
+                      <div class="signals__tabcontent-wrapp">
+                        <div class="signals__dynamics">
+                          <picture>
+                            <source type='image/webp' srcset='img/graphs/dynamics.webp'>
+                            <img width='990' height='546' src='img/graphs/dynamics.png' alt='dynamics'>
+                          </picture>
+                        </div>
+
+                        <div class="signals__history">
+                          <picture>
+                            <source type='image/webp' srcset='img/graphs/history.webp'>
+                            <img width='240' height='547' src='img/graphs/history.png' alt='dynamics history'>
+                          </picture>
+                        </div>
+                      </div>
+                  </li>
+
+                  <li class="signals__tabcontent tabcontent" tabs-content="february">
+                    <div class="signals__tabcontent-wrapp">
+                      <div class="signals__dynamics">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/dynamics.webp'>
+                          <img width='990' height='546' src='img/graphs/dynamics.png' alt='dynamics'>
+                        </picture>
+                      </div>
+
+                      <div class="signals__history">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/history.webp'>
+                          <img width='240' height='547' src='img/graphs/history.png' alt='dynamics history'>
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="signals__tabcontent tabcontent active" tabs-content="march">
+                    <div class="signals__tabcontent-wrapp">
+                      <div class="signals__dynamics">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/dynamics.webp'>
+                          <img width='990' height='546' src='img/graphs/dynamics.png' alt='dynamics'>
+                        </picture>
+                      </div>
+
+                      <div class="signals__history">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/history.webp'>
+                          <img width='240' height='547' src='img/graphs/history.png' alt='dynamics history'>
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="signals__tabcontent tabcontent" tabs-content="april">
+                    <div class="signals__tabcontent-wrapp">
+                      <div class="signals__dynamics">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/dynamics.webp'>
+                          <img width='990' height='546' src='img/graphs/dynamics.png' alt='dynamics'>
+                        </picture>
+                      </div>
+
+                      <div class="signals__history">
+                        <picture>
+                          <source type='image/webp' srcset='img/graphs/history.webp'>
+                          <img width='240' height='547' src='img/graphs/history.png' alt='dynamics history'>
+                        </picture>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="signals__bot">
+              <div class="signals__subscribe">
+                <form class="signals__form">
+                  <span>Получить подробный отчет на email</span>
+
+                  <fieldset>
+                    <label>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#email'></use>
+                      </svg>
+                      <input type="email" name="email" placeholder="Введите ваш email" required>
+                    </label>
+                    <button class="btn" type="submit">ОТПРАВИТЬ ОТЧЕТ</button>
+                  </fieldset>
+                </form>
+              </div>
+
+              <div class="signals__quality">
+                <div class="signals__quality-title">Качество наших сигналов подтверждается <span>myfxbook:</span></div>
+                <a class="signals__quality-link" href="#">
+                  <picture>
+                    <source type='image/webp' srcset='img/myfxbook.webp'>
+                    <img width='93' height='25' src='img/myfxbook.png' alt='myfxbook'>
+                  </picture>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -39,15 +182,7 @@
       <section class="history" id="history">
         <div class="container">
           <div class="history__wrapp">
-            <div class="history__title title">Динамика счёта на <span>10 000$,</span> который торгует только по нашим сигналам</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="prediction" id="prediction">
-        <div class="container">
-          <div class="prediction__wrapp">
-            <div class="prediction__title title">Прогноз дохода в зависимости от капитала</div>
+            <div class="history__title title">Прогноз дохода в зависимости от капитала</div>
           </div>
         </div>
       </section>
@@ -149,8 +284,6 @@
           </div>
         </div>
       </section>
-
-
     </main>
 
     @include('partials/footer.html',{})

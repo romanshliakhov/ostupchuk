@@ -5,7 +5,7 @@ import './components/spollers.js';
 import './components/fullFeedback.js';
 import './components/ratings.js';
 // import './components/dropdown.js';
-// import './components/tabs.js';
+import './components/tabs.js';
 // import './components/modals.js';
 
 

@@ -11,10 +11,12 @@ function tabsInit() {
 
         tabsParr.addEventListener('click', (e) => {
             if (e.target.classList.contains('tablinks')) {
-                const tabsPath = e.target.getAttribute('tabs-btn');
-                tabsBtn.forEach(el => {el.classList.remove('active')});
-                tabsParr.querySelector(`[tabs-btn="${tabsPath}"]`).classList.add('active');
-                tabsHandler(tabsPath);
+              const tabsPath = e.target.getAttribute('tabs-btn');
+
+              tabsBtn.forEach(el => {el.classList.remove('active')});
+              tabsParr.querySelector(`[tabs-btn="${tabsPath}"]`).classList.add('active');
+
+              tabsHandler(tabsPath);
             }
         });
 

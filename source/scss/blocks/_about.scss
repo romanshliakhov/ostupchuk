@@ -1,0 +1,64 @@
+.about {
+  position: relative;
+  padding: 127px 0;
+  background-image: url('../../img/about-bg.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+
+
+  &__wrapp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    // grid-gap: 86px;
+  }
+
+  &__graphs {
+    max-width: 496px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    flex-shrink: 0;
+  }
+
+  &__graphs-item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+
+  &__graph {
+    max-width: 398px;
+    height: 247px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+  }
+
+  &__info {
+    max-width: 665px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 40px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__btn {
+    max-width: 264px;
+    height: 78px;
+  }
+}
