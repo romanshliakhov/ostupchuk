@@ -1,3 +1,56 @@
 .faq {
+  padding: 90px 0 60px;
 
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  &__questions {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+  }
+
+  &__questions-item {
+    padding: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 15px;
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+
+    span {
+      max-width: 1060px;
+    }
+
+    picture,
+    img {
+      transition: all 0.4s ease;
+      flex-shrink: 0;
+    }
+
+    &._active {
+      picture,
+      img {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+
+  &__answer {
+    padding-top: 35px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+  }
 }
