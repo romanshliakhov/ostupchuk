@@ -62,7 +62,7 @@
   &__form {
     display: flex;
     align-items: center;
-    grid-gap: 33px;
+    grid-gap: clamp(10px, 2.661vw, 33px);
 
     span {
       font-family: var(--font-family-heliosextblack);
@@ -78,6 +78,7 @@
       display: flex;
       align-items: center;
       grid-gap: 8px;
+      flex-shrink: 0;
     }
 
     label {
