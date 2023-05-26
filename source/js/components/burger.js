@@ -1,14 +1,20 @@
 // burger
-let menuBtn = document.querySelector('.mobile__header-btn');
-let menuBurgerBtn = document.querySelector('.burger-menu');
-let menu = document.querySelector('.mobile__menu');
+let menuBtn = document.querySelector('.burger');
+let menu = document.querySelector('.mobile');
 let disableScroll = document.querySelector('body');
 
-if (menuBtn) {
-  menuBtn.addEventListener('click', function(){
-    menuBtn.classList.toggle('active');
-    menuBurgerBtn.classList.toggle('active');
+if (menu && menuBtn) {
+  menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
     disableScroll.classList.toggle('body-scroll');
-  });
+  })
+
+  menu.querySelectorAll('.mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+      menuBtn.classList.remove('active');
+      disableScroll.classList.remove('body-scroll');
+    })
+  })
 }

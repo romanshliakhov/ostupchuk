@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
 
   &__wrapp {
-    padding: 280px 0 320px;
+    padding: clamp(180px, 28.226vw, 280px) 0 clamp(160px, 32.258vw, 320px);
   }
 
   &__info {
@@ -13,6 +13,10 @@
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
+
+    @media screen and (max-width: 576px) {
+      align-items: center;
+    }
   }
 
   &__title {

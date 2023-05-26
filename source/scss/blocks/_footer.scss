@@ -11,6 +11,14 @@
     @media screen and (max-width: 1024px) {
       flex-wrap: wrap;
       grid-gap: 20px;
+
+      .footer__nav {
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      justify-content: center;
     }
   }
 
@@ -50,6 +58,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column-reverse;
+      grid-gap: 20px;
+    }
   }
 
   &__copyright {
@@ -62,6 +75,10 @@
     display: flex;
     align-items: center;
     grid-gap: 20px;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
 
     a {
       font-size: 14px;

@@ -5,6 +5,11 @@
   letter-spacing: 0.02em;
   text-align: center;
 
+  @media (max-width: 576px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
   span {
     background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
     -webkit-background-clip: text;
