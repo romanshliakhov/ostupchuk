@@ -1,17 +1,25 @@
 .select {
 	position: relative;
 
+  svg {
+    transition: all 0.3s ease;
+  }
+
   &.is-active {
     .select__body {
-      visibility: visible;
-      opacity: 1;
-      z-index: 5;
+      position: absolute;
+      display: flex;
+      margin-top: 5px;
+      z-index: 10;
     }
 
-    .select__header {
-      svg {
-        transform: scale(-100%);
-      }
+    svg {
+      transform: scale(-1);
     }
+  }
+
+  &__body {
+    display: none;
+    transition: all .3s ease;
   }
 }

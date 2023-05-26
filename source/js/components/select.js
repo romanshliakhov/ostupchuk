@@ -1,5 +1,5 @@
 // Select
-const selects = document.querySelectorAll('.select');
+let selects = document.querySelectorAll('.select');
 
 let selectScript = function (select) {
     select.forEach((item) => {
@@ -8,9 +8,7 @@ let selectScript = function (select) {
             const el = event.target.dataset.choice;
             const text = event.target.innerText;
             if (el === "choosen" && selectCurrent.innerHTML !== text) {
-              selectCurrent.innerText = text;
-              selectCurrent.style.color = "#282828";
-
+                selectCurrent.innerText = text;
             }
             item.classList.toggle("is-active");
         });

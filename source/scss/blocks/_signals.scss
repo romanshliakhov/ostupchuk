@@ -45,8 +45,8 @@
   }
 
   &__tabcontent-wrapp {
-    display: grid;
-    grid-template-columns: 1fr 240px;
+    display: flex;
+    align-items: stretch;
     grid-gap: 10px;
   }
 
@@ -66,8 +66,8 @@
 
     span {
       font-family: var(--font-family-heliosextblack);
-      font-size: 22px;
-      line-height: 33px;
+      font-size: clamp(18px, 1.774vw, 22px);
+      line-height: clamp(24px, 2.661vw, 33px);
       font-weight: 900;
       color: var(--color-white);
       letter-spacing: 0.02em;
@@ -132,8 +132,8 @@
 
   &__quality-title {
     font-family: var(--font-family-heliosextblack);
-    font-size: 22px;
-    line-height: 33px;
+    font-size: clamp(18px, 1.774vw, 22px);
+    line-height: clamp(24px, 2.661vw, 33px);
     font-weight: 900;
     color: var(--color-black);
     letter-spacing: 0.02em;

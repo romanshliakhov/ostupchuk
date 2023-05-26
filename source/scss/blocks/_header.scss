@@ -18,7 +18,7 @@
   }
 
   &__nav {
-    grid-gap: 40px;
+    grid-gap: clamp(30px, 3.226vw, 40px);
     color: var(--color-white);
   }
 }

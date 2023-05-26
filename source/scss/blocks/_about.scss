@@ -9,9 +9,9 @@
 
   &__wrapp {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
-    // grid-gap: 86px;
+    grid-gap: 20px 25px;
   }
 
   &__graphs {
