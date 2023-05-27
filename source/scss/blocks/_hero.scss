@@ -42,20 +42,9 @@
   &__phones,
   &__images {
     position: relative;
-    width: 533px;
-    height: 606px;
+    // width: 533px;
+    // height: 606px;
     margin-left: -100px;
-    transition: all 0.5s linear;
+    transition: 0.3s linear;
   }
-
-  &__phones-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-
-
-
-
 }
