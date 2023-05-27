@@ -1,11 +1,14 @@
 .hero {
+  padding: clamp(180px, 28.226vw, 280px) 0 0;
   background-image: url('../../img/hero-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   &__wrapp {
-    padding: clamp(180px, 28.226vw, 280px) 0 clamp(160px, 32.258vw, 320px);
+    // padding: clamp(180px, 28.226vw, 280px) 0 clamp(160px, 32.258vw, 320px);
+    display: flex;
+    align-items: stretch;
   }
 
   &__info {
@@ -32,6 +35,10 @@
   &__btn {
     max-width: 264px;
     height: 78px;
+  }
+
+  &__phones {
+    margin-left: -100px;
   }
 
 }
