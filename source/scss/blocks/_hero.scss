@@ -8,9 +8,13 @@
   background-repeat: no-repeat;
 
   &__wrapp {
-    // padding: clamp(180px, 28.226vw, 280px) 0 clamp(160px, 32.258vw, 320px);
     display: flex;
     align-items: stretch;
+
+    @media screen and (max-width: 1240px) {
+      flex-direction: column;
+      grid-gap: 40px;
+    }
   }
 
   &__info {
@@ -39,12 +43,16 @@
     height: 78px;
   }
 
-  &__phones,
-  &__images {
+  &__phones {
     position: relative;
-    // width: 533px;
-    // height: 606px;
     margin-left: -100px;
     transition: 0.3s linear;
+
+    @media screen and (max-width: 1240px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+    }
   }
 }
