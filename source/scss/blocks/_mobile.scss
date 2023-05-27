@@ -4,8 +4,8 @@
   right: -22px;
   width: 0;
   height: 0;
-  background-color: var(--color-white);
-  z-index: 20;
+  background-color: var(--color-text);
+  z-index: 10;
   overflow: hidden;
   border-bottom-left-radius: 100%;
   transition: 0.3s ease;
@@ -13,7 +13,7 @@
   &.active {
     display: block;
     width: calc(100% + 48px);
-    height: 100vh;
+    height: calc(100vh + 20px);
     border-bottom-left-radius: 0;
 
     .header__nav,
@@ -24,18 +24,18 @@
   }
 
   &__menu {
-    padding: 50px 40px;
+    padding-top: 150px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    grid-gap: 40px;
-    // opacity: 0;
+    align-items: center;
 
     .header__nav,
     .header__login {
       opacity: 0;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
