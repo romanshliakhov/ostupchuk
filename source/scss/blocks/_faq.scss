@@ -32,10 +32,11 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     text-align: left;
-
+    transition: all 0.3s ease;
 
     span {
       max-width: 1060px;
+      transition: all 0.3s ease;
     }
 
     picture,
@@ -45,9 +46,25 @@
     }
 
     &._active {
+      span {
+        background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
       picture,
       img {
         transform: rotateZ(90deg);
+      }
+    }
+
+    &:hover {
+      span {
+        background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     }
   }
