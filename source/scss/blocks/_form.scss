@@ -1,0 +1,103 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: var(--font-family-inter);
+    font-size: 25px;
+    line-height: 32px;
+    color: #01001C;
+  }
+
+  &__btn {
+    margin-top: 55px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    border: 1px solid var(--color-blue);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+
+    span {
+      background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+
+      span {
+        background: var(--color-white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  &__fieldset {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #FAFAFA;
+    border: 1px solid #939191;
+    box-shadow: 0px 0px 32px rgba(1, 0, 28, 0.04);
+    border-radius: 20px;
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #01001C;
+    transition: all 0.3s ease;
+
+    &:focus,
+    &:valid {
+      border: 1px solid #0057FF;
+    }
+
+    &:invalid {
+      border: 1px solid #EC1D25;
+    }
+
+    &:not(:focus):invalid {
+      border: 1px solid #939191;
+    }
+  }
+
+  &__label-name {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #93979F;
+    cursor: text;
+  }
+
+}

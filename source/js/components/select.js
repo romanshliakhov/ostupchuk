@@ -4,9 +4,11 @@ let selects = document.querySelectorAll('.select');
 let selectScript = function (select) {
     select.forEach((item) => {
         const selectCurrent = item.querySelector(".select__current");
+
         item.addEventListener("click", (event) => {
             const el = event.target.dataset.choice;
             const text = event.target.innerText;
+
             if (el === "choosen" && selectCurrent.innerHTML !== text) {
                 selectCurrent.innerText = text;
             }

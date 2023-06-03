@@ -2839,7 +2839,7 @@
                     </li>
                   </ul>
 
-                  <a href="#"><span>ОПЛАТИТЬ</span></a>
+                  <a href="#" data-path="payment"><span>ОПЛАТИТЬ</span></a>
                 </div>
               </li>
 
@@ -2856,9 +2856,9 @@
                   <div class="access__variant-descr">Здесь небольшой описание подписки на одно-два предложения.</div>
                 </div>
 
-                <div class="access__variant-payments">
+                <!-- <div class="access__variant-payments">
                   <div class="access__variant-price">
-                    <span>300</span> $
+                    <span class="access__price-total">300</span> $
                   </div>
 
                   <div class="access__select select">
@@ -2877,6 +2877,19 @@
                       <li class="access__select-item select__item" data-choice="choosen">12 месяцев</li>
                     </ul>
                   </div>
+                </div> -->
+
+                <div class="access__variant-payments">
+                  <div class="access__variant-price">
+                    <span class="access__price-total">300</span> $
+                  </div>
+
+                  <select class="access__variant-select">
+                    <option value="300" data-link="https://www.google.com/">1 месяц</option>
+                    <option value="700" data-link="https://freelancehunt.com/">3 месяца</option>
+                    <option value="1200" data-link="https://twitter.com/">6 месяцев</option>
+                    <option value="2000" data-link="https://youtube.com/">12 месяцев</option>
+                  </select>
                 </div>
 
                 <div class="access__variant-info">
@@ -2901,7 +2914,7 @@
                     </li>
                   </ul>
 
-                  <a href="#"><span>ОПЛАТИТЬ</span></a>
+                  <a class="access__payments" href="#"><span>ОПЛАТИТЬ</span></a>
                 </div>
               </li>
 
@@ -2920,25 +2933,15 @@
 
                 <div class="access__variant-payments">
                   <div class="access__variant-price">
-                    <span>500</span> $
+                    <span class="access__price-total">500</span> $
                   </div>
 
-                  <div class="access__select select">
-                    <div class="access__select-header select__header">
-                      <span class="access__select-current select__current">1 месяц</span>
-
-                      <svg width="14" height="14">
-                        <use href="img/sprite/sprite.svg#select-arrow"></use>
-                      </svg>
-                    </div>
-
-                    <ul class="access__select-body select__body">
-                      <li class="access__select-item select__item" data-choice="choosen">1 месяц</li>
-                      <li class="access__select-item select__item" data-choice="choosen">3 месяца</li>
-                      <li class="access__select-item select__item" data-choice="choosen">6 месяцев</li>
-                      <li class="access__select-item select__item" data-choice="choosen">12 месяцев</li>
-                    </ul>
-                  </div>
+                  <select class="access__variant-select">
+                    <option value="500" data-link="https://www.google.com/">1 месяц</option>
+                    <option value="1200" data-link="https://freelancehunt.com/">3 месяца</option>
+                    <option value="2000" data-link="https://twitter.com/">6 месяцев</option>
+                    <option value="3000" data-link="https://youtube.com/">12 месяцев</option>
+                  </select>
                 </div>
 
                 <div class="access__variant-info">
@@ -2963,7 +2966,7 @@
                     </li>
                   </ul>
 
-                  <a href="#"><span>ОПЛАТИТЬ</span></a>
+                  <a class="access__payments"><span>ОПЛАТИТЬ</span></a>
                 </div>
               </li>
             </ul>
@@ -3022,6 +3025,8 @@
                 </div>
               </div>
             </div>
+
+            <a class="feedbacks__more btn" target="_blank" href="https://ostupchuk.com/review"><span>Больше отзывов</span></a>
           </div>
         </div>
       </section>
@@ -3110,9 +3115,8 @@
     </main>
 
     @include('partials/footer.html',{})
+    @include('partials/modals.html',{})
   </div>
-
-
 
   <script type="text/javascript" src="js/main.js"></script>
 </body>

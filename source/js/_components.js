@@ -7,7 +7,8 @@ import './components/tabs.js';
 import './components/replaceEl.js';
 import './components/parallax.js';
 import './components/animation.js';
-import './components/activities.js';
+// import './components/multiplays.js';
+import './components/modals.js';
 
 
 

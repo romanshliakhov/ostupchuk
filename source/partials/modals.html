@@ -1,0 +1,45 @@
+<div class="modal">
+  <div class="modal__container" data-animation="fade" data-speed="300" data-target="payment">
+    <div class="modal__wrapper">
+      <div class="modal__close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </div>
+
+      <form class="form" action="#">
+        <div class="form__title">Заголовок формы</div>
+
+        <fieldset class="form__fieldset">
+          <label class="form__label">
+            <input class="form__input" type="text" name="name" required>
+            <span class="form__label-name">Ваше Имя и Фамилия*</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <label class="form__label">
+            <input class="form__input" type="text" name="telegram" required>
+            <span class="form__label-name">TG Аккаунт*</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset form__fieldset--email">
+            <label class="form__label">
+                <input class="form__input" type="email" name="email" required>
+                <span class="form__label-name">Ваш Email*</span>
+            </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset form__fieldset--email">
+          <label class="form__label">
+              <input class="form__input" type="tel" name="tel" required>
+              <span class="form__label-name">Ваш телефон*</span>
+          </label>
+        </fieldset>
+
+        <button class="form__btn" type="submit"><span>ОПЛАТИТЬ</span></button>
+      </form>
+    </div>
+  </div>
+</div>
