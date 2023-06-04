@@ -8,19 +8,15 @@ let disableScroll = document.querySelector('body');
 window.addEventListener('DOMContentLoaded', () => {
   anchorButtons.forEach(function(item){
     item.addEventListener('click', function(e){
-      let clickValue = e.target.getAttribute('href');
-
       e.preventDefault();
 
       menu.classList.remove('active');
       menuBtn.classList.remove('active');
       disableScroll.classList.remove('body-scroll');
 
-
-      window.scrollTo({
-        top: document.getElementById(`${clickValue.replace('#', '')}`).offsetTop,
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
-      })
+      });
     });
   })
 })

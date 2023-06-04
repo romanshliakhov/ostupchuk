@@ -45,6 +45,14 @@
     justify-content: space-between;
     flex-grow: 1;
     grid-gap: 20px;
+
+    @media screen and (max-width: 991px) {
+      min-height: 195px;
+    }
+
+    @media screen and (max-width: 767px) {
+      min-height: initial;
+    }
   }
 
   &__variant-title {
@@ -70,6 +78,8 @@
   }
 
   &__variant-payments {
+    min-height: 108px;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -79,10 +89,29 @@
     @media screen and (max-width: 991px) {
       flex-direction: column;
       grid-gap: 10px;
+      height: 100%;
     }
 
     @media screen and (max-width: 767px) {
       flex-direction: row;
+    }
+  }
+
+  &__discount {
+    font-family: var(--font-family-inter);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+
+    span {
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 900;
+      background: linear-gradient(94.28deg, #00FF0A 0.89%, #FF4545 0.9%, #6A2E21 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
   }
 
@@ -95,52 +124,34 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+
+    @media screen and (max-width: 991px) {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      grid-gap: 5px;
+    }
   }
 
-  &__select {
-    max-width: clamp(130px, 13.387vw, 166px);
-    width: 100%;
-  }
+  &__monthprice {
+    font-family: var(--font-family-inter);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    color: var(--color-grey);
 
-  &__select-header {
-    max-width: clamp(130px, 13.387vw, 166px);
-    width: 100%;
-    padding: 13px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-gap: 5px;
-    background-color: var(--color-white);
-    border: 1px solid #DDDDDD;
-    border-radius: 25px;
-    font-weight: 500;
-    cursor: pointer;
-  }
+    span {
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 900;
+      background: linear-gradient(94.28deg, #45FF4D 0.88%, #00FF0A 0.89%, #68B782 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
 
-  &__select-body {
-    width: 100%;
-    flex-direction: column;
-    background-color: var(--color-white);
-    border: 1px solid #DDDDDD;
-    border-radius: 25px;
-    overflow: hidden;
-
-    li {
-      background-color: var(--color-white);
-      padding: 10px 15px;
-      border-bottom: 1px solid #DDDDDD;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      &:hover,
-      &:active {
-        color: var(--color-blue);
-        background-color: var(--color-gray);
+      @media screen and (max-width: 576px) {
+        display: block;
       }
     }
   }
@@ -209,6 +220,82 @@
 
     .innactive {
       color: var(--color-grey);
+    }
+  }
+
+
+  &__variant-choose {
+    position: relative;
+    max-width: clamp(130px, 11.528vw, 166px);
+    width: 100%;
+
+    &.is-active {
+      .access__variant-select {
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: clamp(130px, 11.528vw, 166px);
+    }
+  }
+
+  &__variant-current {
+    max-width: clamp(130px, 11.528vw, 166px);
+    width: 100%;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 5px;
+    background-color: var(--color-white);
+    border: 1px solid #DDDDDD;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: clamp(130px, 11.528vw, 166px);
+    }
+  }
+
+  &__variant-select {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border: 1px solid #DDDDDD;
+    border-radius: 25px;
+    overflow: hidden;
+
+    li {
+      background-color: var(--color-white);
+      padding: 10px 15px;
+      border-bottom: 1px solid #DDDDDD;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover,
+      &:active {
+        color: var(--color-blue);
+        background-color: var(--color-gray);
+      }
     }
   }
 }

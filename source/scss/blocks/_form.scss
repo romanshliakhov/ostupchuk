@@ -13,7 +13,7 @@
   }
 
   &__btn {
-    margin-top: 55px;
+    margin-top: clamp(20px, 9.549vw, 55px);
     height: 60px;
     width: 100%;
     display: flex;
@@ -45,16 +45,22 @@
         background-clip: text;
       }
     }
+
+    @media screen and (max-width: 576px) {
+      margin-top: 20px;
+    }
   }
 
   &__fieldset {
     position: relative;
-    margin-bottom: 15px;
     width: 100%;
   }
 
   &__label {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__input {
@@ -72,25 +78,21 @@
     color: #01001C;
     transition: all 0.3s ease;
 
-    &:focus,
-    &:valid {
-      border: 1px solid #0057FF;
+    &:focus ~ .form__label-name {
+      font-size: 12px;
+      line-height: 22px;
+      top: 10px;
     }
 
-    &:invalid {
-      border: 1px solid #EC1D25;
-    }
-
-    &:not(:focus):invalid {
-      border: 1px solid #939191;
+    &:focus ~ .flag {
+      display: flex;
     }
   }
 
   &__label-name {
     display: block;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20px;
     left: 40px;
     font-family: var(--font-family-inter);
     font-size: 16px;
@@ -98,6 +100,24 @@
     font-weight: 400;
     color: #93979F;
     cursor: text;
+    transition: all 0.4s linear;
+    z-index: 2;
   }
 
+  .js-validate-error-label {
+    font-family: var(--font-family-inter);
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .flag {
+    position: absolute;
+    display: none;
+    top: 25px;
+    left: 20px;
+  }
+
+  .form__fieldset + .form__fieldset {
+    margin-top: 15px;
+  }
 }

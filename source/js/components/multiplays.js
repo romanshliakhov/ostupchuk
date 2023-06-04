@@ -1,28 +1,32 @@
 // multiplays
-const parentPlan = document.querySelectorAll('.access__variant');
-// let totalValue = document.querySelector('.access__price-total').innerHTML;
-let data = document.querySelectorAll('.access__variant-select');
-let dataLink = document.querySelector('[data-link]').dataset;
-let paymentLink = document.querySelector('.access__payments').getAttribute('href');
+let cards = document.querySelectorAll('.access__variant');
 
+cards.forEach(item => {
+  let cardSelect = item.querySelector('.access__variant-select');
+  let cardDiscount = item.querySelector('.access__discount span');
+  let cardMonthPrice = item.querySelector('.access__monthprice span');
+  let cardPriceTotal = item.querySelector('.access__price-total');
+  let cardBtn = item.querySelector('.access__payments');
 
-parentPlan.forEach((plan) => {
-  let totalValue = document.querySelector('.access__price-total');
+  if(cardSelect){
+    let options = cardSelect.querySelectorAll('li');
 
-  console.log(totalValue);
-})
+    options.forEach(li => {
+      let link = li.getAttribute('data-link');
+      let monthPrice = li.getAttribute('data-month');
+      let discount = li.getAttribute('data-discount');
+      let totalPrice = li.getAttribute('data-price');
 
-console.log(parentPlan);
+      li.addEventListener('click', () => {
+        cardDiscount.textContent = discount;
+        cardMonthPrice.textContent = monthPrice;
+        cardPriceTotal.textContent = totalPrice;
+        cardBtn.setAttribute('href', link);
+      })
 
-// data.forEach((select) => {
-
-// })
-
-
-// console.log(data);
-// console.log(dataLink);
-// console.log(paymentLink);
-// console.log(totalValue);
+    });
+  }
+});
 
 
 
