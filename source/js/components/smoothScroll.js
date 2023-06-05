@@ -1,4 +1,4 @@
-const anchorButtons = document.querySelectorAll('.nav__link');
+const anchorButtons = document.querySelectorAll('.anchor');
 const header = document.querySelector('header');
 
 let menuBtn = document.querySelector('.burger');
